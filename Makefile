@@ -2,10 +2,10 @@ docker:
 	docker compose up
 
 migrateup:
-	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/master-class?sslmode=disable" -verbose up
+	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simplebank?sslmode=disable" -verbose up
 
 migratedown:
-	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/master-class?sslmode=disable" -verbose down
+	migrate -path db/migrations -database "postgresql://postgres:postgres@localhost:5432/simplebank?sslmode=disable" -verbose down
 
 sqlc:
 	sqlc generate
